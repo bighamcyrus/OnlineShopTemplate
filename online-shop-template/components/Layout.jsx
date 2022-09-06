@@ -1,8 +1,25 @@
-import React from 'react'
+import React from 'react';
+import Head from 'next/head';
 
-const Layout = () => {
+import NavBar from './NavBar';
+import Footer from './Footer';
+
+const Layout = ({ children }) => {
   return (
-    <div>Layout</div>
+    <div className="layout">
+      <Head>
+        <title>JS Mastery Store</title>
+      </Head>
+      <header>
+        <NavBar />
+      </header>
+      <main className="main-container">
+        {children}
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   )
 }
 
